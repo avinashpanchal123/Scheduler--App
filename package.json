@@ -4,7 +4,8 @@
   "description": "creating an event scheduler  app using express and node JS",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/avinashpanchal123/Scheduler--App/issues"
   },
-  "homepage": "https://github.com/avinashpanchal123/Scheduler--App#readme"
+  "homepage": "https://github.com/avinashpanchal123/Scheduler--App#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
 }
