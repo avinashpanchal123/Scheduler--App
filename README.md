@@ -1,2 +1,7 @@
 # Scheduler--App
-creating an event scheduler  app using express and node JS
+created an event scheduler  app using express and node JS
+
+command to run this app is npm start
+
+We need to put our Events in events.json file date time in the format of year/month/date hr/min/sec
+and whenever the time will come the remainder is printed in the console the event in the reverese order
