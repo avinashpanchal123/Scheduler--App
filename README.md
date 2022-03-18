@@ -11,4 +11,4 @@ To create this clone following Tech stack is used by contributors.
 command to run this app is npm start
 
 We need to put our Events in events.json file date time in the format of year/month/date hr/min/sec
-and whenever the time will come the remainder is printed in the console the event in the reverese order
+and whenever the scheduled time will come the remainder is printed in the console the event in the reverese order
