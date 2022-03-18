@@ -1,5 +1,8 @@
 # Scheduler--App
-created an event scheduler  app using express and node JS
+<h1>created an event scheduler  app using express and node JS</h1>
+
+### Tech stacks used :
+MERN stands for :  E - Express,  N - Node.js
 
 command to run this app is npm start
 
