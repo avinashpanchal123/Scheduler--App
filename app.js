@@ -28,7 +28,7 @@ let mins
 let event_name;
 let timer  = setInterval(() => {
     getOutput()
-}, 1000);
+}, 100);
 
 
 
@@ -92,8 +92,7 @@ function getOutput(){
    }
 
    }
-//    console.log(a);
-  
+   
 
 }
 
@@ -118,9 +117,11 @@ function printOutput(str){
    
     let outputTimer = setTimeout(() => {
         console.log(output);
+        fetchData()
         timer = setInterval(getOutput, 200)
     }, ((output.length) * 1000));
 }
+
 
 
 
