@@ -1,9 +1,8 @@
 const express = require("express");
-const { location } = require("express/lib/response");
-
 const app = express();
 
 const events = require("./events.json");
+
 
 let flag = true;
 
@@ -31,53 +30,58 @@ let timer  = setInterval(() => {
 }, 100);
 
 
-
-function getOutput(){
+function getCurrentDateTime(){
     today = new Date();
 
-     if((today.getMonth()+1) < 10){
-         month = "0"+(today.getMonth()+1)
-     }
-     else{
-         month = (today.getMonth()+1)
-     }
-
-     if( today.getDate() < 10){
-         date = "0"+ today.getDate()
-     }
-     else{
-         date = today.getDate()
-     }
-
-    if( today.getHours() < 10){
-        hrs = "0"+today.getHours()
+    if((today.getMonth()+1) < 10){
+        month = "0"+(today.getMonth()+1)
     }
     else{
-        hrs  = today.getHours()
+        month = (today.getMonth()+1)
     }
 
-    if( today.getMinutes() < 10){
-        mins = "0"+ today.getMinutes()
-    }
-    else{
-        mins = today.getMinutes()
-    }
-
-    if( today.getSeconds() < 10) {
-        sec = "0" + today.getSeconds()
+    if( today.getDate() < 10){
+        date = "0"+ today.getDate()
     }
     else{
-        sec = today.getSeconds()
+        date = today.getDate()
     }
 
-    currDate = today.getFullYear()+'-'+month+'-'+date;
+   if( today.getHours() < 10){
+       hrs = "0"+today.getHours()
+   }
+   else{
+       hrs  = today.getHours()
+   }
+
+   if( today.getMinutes() < 10){
+       mins = "0"+ today.getMinutes()
+   }
+   else{
+       mins = today.getMinutes()
+   }
+
+   if( today.getSeconds() < 10) {
+       sec = "0" + today.getSeconds()
+   }
+   else{
+       sec = today.getSeconds()
+   }
+
+   currDate = today.getFullYear()+'-'+month+'-'+date;
 
 
-    currTime = hrs+":"+mins+":"+sec;
+   currTime = hrs+":"+mins+":"+sec;
 
-    a = (currDate+" "+currTime);
+   return (currDate+" "+currTime);
+}
 
-   
+
+
+function getOutput(){
+  
+    a = getCurrentDateTime()
+
 
    for (let i = 0; i < events.length; i++) {
   
@@ -117,11 +121,10 @@ function printOutput(str){
    
     let outputTimer = setTimeout(() => {
         console.log(output);
-        fetchData()
+  
         timer = setInterval(getOutput, 200)
     }, ((output.length) * 1000));
 }
-
 
 
 
